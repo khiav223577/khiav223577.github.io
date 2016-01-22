@@ -1,0 +1,119 @@
+// Place all the styles related to the game controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.textDiv{
+  width:100%;
+  height:500px;
+  overflow-x:scroll;
+  overflow-y:scroll;
+  background:#ffffff;
+  border: solid 1px gray;
+}
+code{
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+.spriteDiv{
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+.GAMEBOARD{
+  position: relative; 
+  margin: 0 auto; 
+  border:0px solid blue; 
+  width:475px;
+}
+.unselectable{
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -webkit-user-select: none; 
+  -o-user-select: none; 
+  -ms-user-select: none;  
+}
+img[src=""]{
+   display: none;
+}
+.redUnderLine{
+  border-bottom:2px solid red;
+}
+@mixin shadow($paras){
+  -webkit-box-shadow: $paras;
+  -moz-box-shadow: $paras;
+  -o-box-shadow: $paras;
+  box-shadow: $paras;
+}
+@mixin opacity($opa){
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opa*100});
+  filter: alpha(opacity=#{$opa*100});
+  -moz-opacity: $opa;
+  -khtml-opacity: $opa;
+  opacity: $opa;
+}
+@mixin fancy_button($className, $color1, $color2){
+  .#{$className}{
+    display:inline-block;
+    outline:0;
+    color:$color2;
+    background: $color1;
+    border: 5px solid $color1;
+    white-space:nowrap;
+    line-height:1.4;
+    position:relative;
+    border-radius:10px;
+    @include shadow(5px 5px 0 0 rgba(0,0,0,0.15));
+    -webkit-transition: 0.1s;
+       -moz-transition: 0.1s;
+         -o-transition: 0.1s;
+            transition: 0.1s;
+    cursor: pointer;
+  }
+  .#{$className}:enabled:hover{
+    color:$color1;
+    background:$color2;
+    @include shadow(5px 5px 0 0 rgba(0,0,0,0.1));
+  }
+  .#{$className}:enabled:active{
+    -webkit-transform:translate(1px, 4px);
+    -ms-transform:translate(1px, 4px);
+    transform:translate(1px, 4px);
+    @include shadow(0 0 0 0 rgba(0,0,0,0.5));
+  }
+  .#{$className}:disabled{
+    @include opacity(0.5);
+    cursor:auto;
+  }
+  .#{$className}:disabled:hover, .#{$className}:disabled:focus{
+  
+  }
+}
+@include fancy_button(blue_white_button, #4472b9, white);
+@include fancy_button(red_white_button , #c7254e, white);
+@include fancy_button(G2048_button, #8f7a66, #f9f6f2);
+
+.game_control_button_text_no_margin{
+  font-size:16px; 
+  font-family: 'Plantagenet Cherokee', 'TrajanPro-Regular', 'sans-serif';
+}
+.game_control_button_text{
+  font-size:16px; 
+  font-family: 'Plantagenet Cherokee', 'TrajanPro-Regular', 'sans-serif';
+  margin:10px 5px 10px 5px;
+}
+.start_game_button_text{
+  padding:9px 16px !important;
+  font-family: 'Plantagenet Cherokee', 'TrajanPro-Regular', 'sans-serif';
+  font-weight:500;
+  font-style:normal;
+  font-weight:bold;
+  font-size: 32px;
+}
+.dark_layer{
+  position: relative;
+}
+.dark_layer:after{
+  content:""; 
+  position: absolute;
+  top:0; left:0; bottom:0; right:0; 
+  z-index: 99;
+  background-color: rgba(0,0,0,0.6);
+}

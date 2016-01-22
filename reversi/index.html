@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reversi</title>
+  <meta charset="UTF-8">
+  <link href="game.css" media="all" rel="stylesheet" type="text/css">
+  <link href="reversi.css" media="all" rel="stylesheet" type="text/css">
+  <link href="bootstrap.css" media="all" rel="stylesheet" type="text/css">
+  <link href="bootstrap-theme.min.css" media="all" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="game.js"></script>
+  <script type="text/javascript" src="all.js"></script>
+  <script type="text/javascript" src="bootstrap.js"></script>
+  <script type="text/javascript" src="effects.js"></script>
+</head>
+<body>
+	<p>
+	  <font size="5">黑白棋</font>&nbsp;&nbsp;&nbsp;
+	  <button class="blue_white_button" data-toggle="modal" data-target="#ruleModal" onclick="$('#rule_iframe').attr('src','https://zh.wikipedia.org/wiki/%E9%BB%91%E7%99%BD%E6%A3%8B#.E9.81.8A.E6.88.B2.E8.A6.8F.E5.89.87');">規則</button>&nbsp;&nbsp;
+	</p>
+	<p><code><font size="4">Date:<font color="BLUE"></code> 2014/06/11</font> </font></p>
+	<p><code><font size="4">By&nbsp;&nbsp;:<font color="BLUE"></code> khiav</font> </font></p>
+	<hr style="margin:0px;padding:0px;">
+	<script>
+	window.ondragstart = function() { return false; };
+
+	</script>
+	<div class="GAMEBOARD" ><center>
+	  <form id="GameForm" onSubmit="return false">
+		<input readonly type="button" name="NewGame" style="display:none" class="red_white_button game_control_button_text unselectable" value="新遊戲" onClick="if (this.form.reversi) this.form.reversi.Reset();" >
+		<input readonly type="button" name="Reset" disabled class="blue_white_button game_control_button_text unselectable" value="投　降" onClick="if (this.form.reversi) this.form.reversi.Reset();" >
+		<input readonly type="button" name="Undo"  disabled class="blue_white_button game_control_button_text unselectable" value="悔　步" onClick="if (this.form.reversi) this.form.reversi.Undo();" >
+		<input readonly type="button" name="AI"    style="display:none" value="AI"    style="width:60px;height:25px; margin:10px 5px 10px 5px;" onClick="if (this.form.reversi) this.form.reversi.AI();" >
+		<div id="GameBoard" class="dark_layer">
+		  <div id="startGame0" style="position:absolute; left: 70px; top:200px; z-index: 100;"><button onClick="startGame(1)" class="blue_white_button start_game_button_text unselectable" style='width: 140px;'>先 手</button></div>
+		  <div id="startGame1" style="position:absolute; left:266px; top:200px; z-index: 100;"><button onClick="startGame(0)" class="blue_white_button start_game_button_text unselectable" style='width: 140px;'>後 手</button></div>
+		  <img src="assets/game/reversi/Reversi.png" class="unselectable" onLoad="createGame(this.parentNode)" onMouseMove="gameInput(this.parentNode,event,0);" onClick="gameInput(this.parentNode,event,1)">
+		</div>
+		<div style="background-color: #A5ABAF; margin:10px 0px 10px 0px;">
+		  <span style="color:black;font-size:40px;">2<input type="hidden" name="blackNum"></span>
+		  <span style="color:blue ;font-size:30px">&nbsp;&nbsp;&nbsp;&nbsp;V.S.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		  <span style="color:white;font-size:40px;">2<input type="hidden" name="whiteNum"></span>  
+		  <img id="USER_PHOTO" src="assets/game/reversi/unknown.png" style="display: none;">
+		  <img id="blackPlayerHead" style="margin-left:  50px; float:left ; height:57px;">
+		  <img id="whitePlayerHead" style="margin-right: 50px; float:right; height:57px;">
+		</div>
+		<span style="color:red;  font-size:30px;"><input type="hidden" name="red_msg"></span>
+		<span style="color:green;font-size:30px;"><input type="hidden" name="green_msg"></span>
+	  </form>
+	</center></div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="ruleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" style="width:1000px;">
+		<div class="modal-content" >
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="myModalLabel">黑白棋</h4>
+		  </div>
+		  <div class="modal-body" style="height:520px;" >
+			<iframe name="rule_iframe" id="rule_iframe" width="100%" height="470px"></iframe>
+			<hr>
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+</body>
+</html>
+
+
