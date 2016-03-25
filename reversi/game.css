@@ -22,6 +22,7 @@ code{
   margin: 0 auto; 
   border:0px solid blue; 
   width:475px;
+  min-height: 700px;
 }
 .unselectable{
   -moz-user-select: none; 
