@@ -12,23 +12,43 @@
     ga('create', 'UA-89612344-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <style>
+    body{
+      background-color: rgba(0, 0, 0, 1);
+    }
+    .background{
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black url(https://cloud.githubusercontent.com/assets/4011729/21568338/9fa05df8-ceee-11e6-922d-10d09ffd46d3.jpg) no-repeat 0 0;
+      background-size: cover;
+      width: 100%;
+      min-height: 700px;
+      opacity: 0.6;
+      z-index: -1;
+    }
+    .footer{
+      margin-top: 40px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <h3>Khiav's Page</h3>
-  <div>
-<!--------------------------------------------->
-    <div>
+  <div class="background"></div>
+  <div class="application_container">
+    <div class="block">
       <a href="/reversi">Reversi</a>
     </div>
-<!--------------------------------------------->
-    <div>
+    <div class="block">
       <a href="/Emerald-Froests-Jumping-Wolf">Emerald Froest's Jumping Wolf</a>
     </div>
-<!--------------------------------------------->
-    <div>
+    <div class="block">
       <a href="/Easy-Rent/">Easy Rent</a>
     </div>
   </div> 
-  <a href="http://info.flagcounter.com/47U6"><img src="http://s09.flagcounter.com/count2/47U6/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+  <div class="footer">
+    <a href="http://info.flagcounter.com/47U6"><img src="http://s09.flagcounter.com/count2/47U6/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+  </div>
 </body>
 </html>
