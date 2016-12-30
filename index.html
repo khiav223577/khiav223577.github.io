@@ -24,12 +24,38 @@
       background-size: cover;
       width: 100%;
       min-height: 700px;
-      opacity: 0.6;
       z-index: -1;
     }
     .footer{
-      margin-top: 40px;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
       text-align: center;
+    }
+    .application_container{
+      background-color: rgba(255, 255, 255, 0.4);
+      margin: 40px;
+      padding: 20px;
+    }
+    .block{
+      width: 140px;
+      float: left;
+    }
+    .block a{
+      text-decoration: none;
+    }
+    .block img{
+      width: 100px;
+      height: 100px;
+    }
+    .block .title{
+      font-size: 18px;
+      font-weight: bold;
+      color: #1ab51a;
+    }
+    .block .desc{
+      color: white;
+      font-size: 12px;
     }
   </style>
 </head>
@@ -38,15 +64,24 @@
   <div class="background"></div>
   <div class="application_container">
     <div class="block">
-      <a href="/reversi">Reversi</a>
+      <a href="/reversi">
+        <img src="https://cloud.githubusercontent.com/assets/4011729/21568711/b5fbd0de-cef1-11e6-9a0b-3e552d7af4d0.png">
+        <div class="title">Reversi</div>
+        <div class="desc">Play Reversi with your friends or AI!</div>
+      </a>
     </div>
     <div class="block">
-      <a href="/Emerald-Froests-Jumping-Wolf">Emerald Froest's Jumping Wolf</a>
+      <a href="/Emerald-Froests-Jumping-Wolf">
+        <img src="https://cloud.githubusercontent.com/assets/4011729/15992570/db53a67e-3101-11e6-97ee-546002f4c054.png">
+        <div class="title">Emerald Froest's Jumping Wolf</div>
+        <div class="desc">Play Reversi with your friends or AI!</div>
+      </a>
     </div>
     <div class="block">
       <a href="/Easy-Rent/">Easy Rent</a>
     </div>
   </div> 
+  <br style="clear: both;">
   <div class="footer">
     <a href="http://info.flagcounter.com/47U6"><img src="http://s09.flagcounter.com/count2/47U6/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
   </div>
