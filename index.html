@@ -12,23 +12,87 @@
     ga('create', 'UA-89612344-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <style>
+    body{
+      overflow-x: hidden;
+      background-color: rgba(0, 0, 0, 1);
+    }
+    .background{
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black url(https://cloud.githubusercontent.com/assets/4011729/21568338/9fa05df8-ceee-11e6-922d-10d09ffd46d3.jpg) no-repeat 0 0;
+      background-size: cover;
+      width: 100%;
+      min-height: 700px;
+      opacity: 0.6;
+      z-index: -1;
+    }
+    .footer{
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      text-align: center;
+    }
+    .application_container{
+      /*background-color: rgba(255, 255, 255, 0.4);*/
+      margin: 40px;
+      padding: 20px;
+    }
+    .block{
+      width: 160px;
+      float: left;
+      padding: 10px 30px;
+    }
+    .block a{
+      text-decoration: none;
+    }
+    .block img{
+      max-width: 140px;
+      height: 100px;
+      margin-bottom: 4px;
+    }
+    .block .title{
+      font-size: 18px;
+      font-weight: bold;
+      color: #4fdc4f;
+      margin-bottom: 2px;
+    }
+    .block .desc{
+      color: white;
+      font-size: 12px;
+    }
+  </style>
 </head>
 <body>
-  <h3>Khiav's Page</h3>
-  <div>
-<!--------------------------------------------->
-    <div>
-      <a href="/reversi">Reversi</a>
+  <div><h2 style="color: white;">Khiav's Page</h2></div>
+  <div class="background"></div>
+  <div class="application_container">
+    <div class="block">
+      <a href="/reversi">
+        <img src="https://cloud.githubusercontent.com/assets/4011729/21569034/31189cc8-cef4-11e6-9905-624b5002c6a1.png">
+        <div class="title">Reversi</div>
+        <div class="desc">Play Reversi with your friends or AI!</div>
+      </a>
     </div>
-<!--------------------------------------------->
-    <div>
-      <a href="/Emerald-Froests-Jumping-Wolf">Emerald Froest's Jumping Wolf</a>
+    <div class="block">
+      <a href="/Emerald-Froests-Jumping-Wolf">
+        <img src="https://cloud.githubusercontent.com/assets/4011729/15992570/db53a67e-3101-11e6-97ee-546002f4c054.png">
+        <div class="title">Emerald Froest's Jumping Wolf</div>
+        <div class="desc">Please help the wolf defeat those scary monsters by your magical voice.</div>
+      </a>
     </div>
-<!--------------------------------------------->
-    <div>
-      <a href="/Easy-Rent/">Easy Rent</a>
+    <div class="block">
+      <a href="/Easy-Rent/">
+        <img src="https://cloud.githubusercontent.com/assets/4011729/21569091/dd262576-cef4-11e6-8fc7-32c736f4af11.png">
+        <div class="title">Easy Rent</div>
+        <div class="desc">A chrome extension to help people rent houses easier.</div>
+      </a>
     </div>
+    <br style="clear: both;">
   </div> 
-  <a href="http://info.flagcounter.com/47U6"><img src="http://s09.flagcounter.com/count2/47U6/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+  <div class="footer">
+    <a href="http://info.flagcounter.com/47U6"><img src="http://s09.flagcounter.com/count2/47U6/bg_000000/txt_FFFFFF/border_999999/columns_4/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+  </div>
 </body>
 </html>
