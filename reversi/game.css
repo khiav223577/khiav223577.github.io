@@ -93,16 +93,16 @@ img[src=""]{
 
 .game_control_button_text_no_margin{
   font-size:16px; 
-  font-family: 'Plantagenet Cherokee', 'TrajanPro-Regular', 'sans-serif';
+  font-family: 'TrajanPro-Regular', 'sans-serif';
 }
 .game_control_button_text{
   font-size:16px; 
-  font-family: 'Plantagenet Cherokee', 'TrajanPro-Regular', 'sans-serif';
+  font-family: 'TrajanPro-Regular', 'sans-serif';
   margin:10px 5px 10px 5px;
 }
 .start_game_button_text{
   padding:9px 16px !important;
-  font-family: 'Plantagenet Cherokee', 'TrajanPro-Regular', 'sans-serif';
+  font-family: 'TrajanPro-Regular', 'sans-serif';
   font-weight:500;
   font-style:normal;
   font-weight:bold;
